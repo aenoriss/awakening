@@ -220,17 +220,17 @@ camera.position.z = 160
 scene.add(camera)
 
 //Audio
-// const listener = new THREE.AudioListener();
-// const sound = new THREE.Audio( listener );
-// camera.add( listener );
+const listener = new THREE.AudioListener();
+const sound = new THREE.Audio( listener );
+camera.add( listener );
 
-// const audioLoader = new THREE.AudioLoader();
-// audioLoader.load( 'music/soundtrack.mp3', function( buffer ) {
-// 	sound.setBuffer( buffer );
-// 	sound.setLoop( true );
-// 	sound.setVolume( 0.5 );
-// 	sound.play();
-// });
+const audioLoader = new THREE.AudioLoader();
+audioLoader.load( 'music/soundtrack.mp3', function( buffer ) {
+	sound.setBuffer( buffer );
+	sound.setLoop( true );
+	sound.setVolume( 0.5 );
+	sound.play();
+});
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
