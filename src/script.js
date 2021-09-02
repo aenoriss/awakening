@@ -252,7 +252,6 @@ const clock = new THREE.Clock()
 
 const tick = () => {
     const elapsedTime = clock.getElapsedTime()
-    console.log("elapsed", elapsedTime);
     for(let i = 15; i < 2012; i = i + 2){
         let object = scene.getObjectById( i, true )
         object.scale.y = Math.sin(elapsedTime + i);
