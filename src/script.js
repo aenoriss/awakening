@@ -264,9 +264,9 @@ const tick = () => {
         object.rotateY(0.01);
     }
 
-    if(camera.position.z > 90 && elapsedTime < 8 ){
-        camera.position.z = camera.position.z - 1;
-    }
+    // if(camera.position.z > 90 && elapsedTime < 8 ){
+    //     camera.position.z = camera.position.z - 1;
+    // }
     
     // const sphereId = scene.getObjectByName( "sphere", true )
     // sphereId.scale.y = Math.sin(0.5 * elapsedTime)
