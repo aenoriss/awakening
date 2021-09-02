@@ -252,17 +252,17 @@ const clock = new THREE.Clock()
 
 const tick = () => {
     const elapsedTime = clock.getElapsedTime()
-    for(let i = 15; i < 2012; i = i + 2){
-        let object = scene.getObjectById( i, true )
-        object.scale.y = Math.sin(elapsedTime + i);
-        object.scale.x = Math.sin(elapsedTime + i);
-        object.scale.z = Math.sin(elapsedTime + i);
-    }
+    // for(let i = 15; i < 2012; i = i + 2){
+    //     let object = scene.getObjectById( i, true )
+    //     object.scale.y = Math.sin(elapsedTime + i);
+    //     object.scale.x = Math.sin(elapsedTime + i);
+    //     object.scale.z = Math.sin(elapsedTime + i);
+    // }
 
-    for(let i = 16; i <= 2012; i = i + 2){
-        let object = scene.getObjectById( i, true )
-        object.rotateY(0.01);
-    }
+    // for(let i = 16; i <= 2012; i = i + 2){
+    //     let object = scene.getObjectById( i, true )
+    //     object.rotateY(0.01);
+    // }
 
     // if(camera.position.z > 90 && elapsedTime < 8 ){
     //     camera.position.z = camera.position.z - 1;
