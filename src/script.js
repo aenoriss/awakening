@@ -8,10 +8,6 @@ import { DirectionalLight, Scene } from 'three'
  * Base
  */
 
-
-// Debug
-const gui = new dat.GUI()
-
 //TextureLoader
 const loadingManager = new THREE.LoadingManager()
 const textureLoader = new THREE.TextureLoader(loadingManager)
