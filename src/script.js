@@ -216,7 +216,7 @@ window.addEventListener('resize', () => {
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 130)
 camera.position.x = -4
 camera.position.y = 0
-camera.position.z = 90
+camera.position.z = 160
 scene.add(camera)
 
 //Audio
@@ -230,6 +230,7 @@ audioLoader.load( 'music/soundtrack.mp3', function( buffer ) {
 	sound.setLoop( true );
 	sound.setVolume( 0.5 );
 	sound.play();
+    getAudioContext().resume();
 });
 
 // Controls
@@ -264,16 +265,9 @@ const tick = () => {
         object.rotateY(0.01);
     })
     
- 
-
-    // for(let i = 16; i <= 2012; i = i + 2){
-    //     let object = scene.getObjectById( i, true )
-    //     object.rotateY(0.01);
-    // }
-
-    // if(camera.position.z > 90 && elapsedTime < 8 ){
-    //     camera.position.z = camera.position.z - 1;
-    // }
+    if(camera.position.z > 90 && elapsedTime < 8 ){
+        camera.position.z = camera.position.z - 1;
+    }
     
     // const sphereId = scene.getObjectByName( "sphere", true )
     // sphereId.scale.y = Math.sin(0.5 * elapsedTime)
