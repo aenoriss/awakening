@@ -252,12 +252,19 @@ const clock = new THREE.Clock()
 
 const tick = () => {
     const elapsedTime = clock.getElapsedTime()
-    // for(let i = 15; i < 2012; i = i + 2){
-    //     let object = scene.getObjectById( i, true )
-    //     object.scale.y = Math.sin(elapsedTime + i);
-    //     object.scale.x = Math.sin(elapsedTime + i);
-    //     object.scale.z = Math.sin(elapsedTime + i);
-    // }
+    sphereArr.forEach( function( item, i) {
+        let object = scene.getObjectById( item, true )
+        object.scale.y = Math.sin(elapsedTime + i);
+        object.scale.x = Math.sin(elapsedTime + i);
+        object.scale.z = Math.sin(elapsedTime + i);
+    })
+
+    cubeArr.forEach( function( item, i) {
+        let object = scene.getObjectById( item, true )
+        object.rotateY(0.01);
+    })
+    
+ 
 
     // for(let i = 16; i <= 2012; i = i + 2){
     //     let object = scene.getObjectById( i, true )
