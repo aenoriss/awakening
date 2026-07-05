@@ -4,7 +4,7 @@ An interactive Three.js art piece. A lattice of pulsing spheres and turning cube
 
 ## What it is
 
-I made this as a piece, not an exercise. It began from a Three.js scaffold, but the textures, the soundtrack, the title, and the motion are the work. You load it, the camera drifts inward through a field of fire and mud, the words "Awakening / By Aenoris" settle into view, and the whole lattice breathes. You can drag to look around; left alone, it rotates on its own.
+This is an art piece I actually care about. It began from a Three.js scaffold, but the textures, the soundtrack, the title, and the motion are all mine. You load it and the camera drifts inward through a field of fire and mud. The words "Awakening / By Aenoris" settle into view, and the lattice starts to breathe. Drag to look around; left alone, it rotates on its own.
 
 ## What it does
 
@@ -19,7 +19,7 @@ I made this as a piece, not an exercise. It began from a Three.js scaffold, but 
 
 ### The breathing lattice
 
-A triple nested loop instantiates 2000 meshes, 1000 spheres and 1000 cubes, sharing two materials and two textures so the whole field is cheap to build. In the render loop each sphere's scale is driven by `Math.sin(elapsedTime + i)`, where `i` is the mesh index. That per-index phase offset is the trick: instead of the whole grid pulsing in unison, a wave ripples across it, because every sphere is a little further along its sine than its neighbor. The cubes rotate on their Y axis each frame. For the first 8 seconds the camera moves from z = 160 toward the center for the reveal, and after that OrbitControls autoRotate takes over. Meshes are tracked by their scene id and looked up each frame to animate them.
+A triple nested loop instantiates 2000 meshes, 1000 spheres and 1000 cubes, sharing two materials and two textures so the whole field is cheap to build. In the render loop each sphere's scale is driven by `Math.sin(elapsedTime + i)`, where `i` is the mesh index. That per-index phase offset is the trick. Every sphere sits a little further along its sine than its neighbor, so a wave ripples across the grid. The cubes spin on their Y axis each frame. For the first 8 seconds the camera pushes from z = 160 toward the center for the reveal, then OrbitControls autoRotate takes over. Each mesh is tracked by its scene id and looked up per frame to animate it.
 
 ```mermaid
 flowchart LR
@@ -47,4 +47,4 @@ A built `dist/` is already checked in.
 
 ## Status
 
-An interactive art piece from my Three.js work. It runs as a standalone scene, meant to be looked at and listened to rather than used.
+An interactive art piece from my Three.js work. It runs as a standalone scene, meant to be watched and listened to.
