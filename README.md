@@ -4,7 +4,7 @@ An interactive Three.js art piece. A lattice of pulsing spheres and turning cube
 
 ## What it is
 
-This one I am genuinely proud of. It began from a Three.js scaffold, but the textures, the soundtrack, the title, and the motion are all mine. You load it and the camera drifts inward through a field of fire and mud. The words "Awakening / By Aenoris" settle into view, and the lattice starts to breathe. Drag to look around; left alone, it rotates on its own.
+I just wanted to learn Three.js and chill. It started from a scaffold, but the textures, soundtrack, title, and motion are mine. The camera drifts inward through fire and mud, the title settles in, and the lattice breathes. Drag to look around, or leave it to rotate on its own.
 
 ## What it does
 
