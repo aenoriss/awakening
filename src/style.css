@@ -1,19 +1,74 @@
-*
-{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 html,
-body
-{
-    overflow: hidden;
+body {
+  overflow: hidden;
+  background: #000;
+  font-family: system-ui, sans-serif;
+  color: #fff;
 }
 
-.webgl
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+/* The way in: the whole window is the button, the lattice turning slowly behind it. */
+.begin {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 14px;
+  border: 0;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.9));
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 1.2s ease, visibility 1.2s;
+}
+
+.begin strong {
+  font-weight: 300;
+  font-size: clamp(2.4rem, 8vw, 6rem);
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  text-transform: uppercase;
+}
+
+.begin span {
+  font-size: 0.8rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: #fdb813;
+}
+
+.begin.is-gone {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.keys {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  pointer-events: none;
+}
+
+.keys.is-on {
+  opacity: 1;
 }

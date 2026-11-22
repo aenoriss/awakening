@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Three of the lattice's spheres at three sizes, over black. -->
+  <rect width="64" height="64" rx="14" fill="#000"/>
+  <circle cx="16" cy="32" r="5" fill="#fdb813"/>
+  <circle cx="32" cy="32" r="9" fill="#ff7a1a"/>
+  <circle cx="50" cy="32" r="4" fill="#fdb813"/>
+</svg>
